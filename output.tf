@@ -33,7 +33,7 @@ output "created_iam_users_custom" {
 output "created_iam_users_map" {
   value = {
     for user in aws_iam_user.users :
-    user.unique_id => user.id // "AIDA4BML4STW22K74HQFF" : "vasya" (example)
+    user.unique_id => user.id // "XXXXXXXXXXXXXXXXX" : "maks" (example)
   }
 }
 
@@ -52,6 +52,6 @@ output "custom_if_length_4_characters" {
 output "server_all" {
   value = {
     for server in aws_instance.my_usa_server :
-    server.id => server.public_ip // "i-0490f049844513179" = "99.79.58.22" (example)
+    server.id => server.public_ip // "i-00000000000000" = "99.99.99.99" (example)
   }
 }
